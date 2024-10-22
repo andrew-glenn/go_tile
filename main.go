@@ -219,10 +219,10 @@ func main() {
 	httpServeMux := http.NewServeMux()
 
 	// Tile HTTP request handler
-	httpServeMux.HandleFunc("/tile/", requestHandler)
+	httpServeMux.HandleFunc("/", requestHandler)
 
 	// Static HTTP request handler
-	httpServeMux.Handle("/", http.FileServer(http.Dir(*static_dir)))
+	// httpServeMux.Handle("/", http.FileServer(http.Dir(*static_dir)))
 
 	// HTTP Server
 	httpServer := http.Server{
